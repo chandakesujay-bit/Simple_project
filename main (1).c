@@ -2,9 +2,9 @@
 
 // Function declarations
 float add(float, float);
-float subtract(float, float);
-float multiply(float, float);
-float divide(float, float);
+float sub(float, float);
+float mul(float, float);
+float div(float, float);
 
 int main() {
     float num1, num2;
@@ -35,13 +35,13 @@ int main() {
                 printf("Result: %.2f\n", add(num1, num2));
                 break;
             case 2:
-                printf("Result: %.2f\n", subtract(num1, num2));
+                printf("Result: %.2f\n", sub(num1, num2));
                 break;
             case 3:
-                printf("Result: %.2f\n", multiply(num1, num2));
+                printf("Result: %.2f\n", mul(num1, num2));
                 break;
             case 4:
-                printf("Result: %.2f\n", divide(num1, num2));
+                printf("Result: %.2f\n", div(num1, num2));
                 break;
             default:
                 printf("Invalid choice!\n");
