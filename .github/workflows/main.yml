@@ -17,8 +17,5 @@ jobs:
     - name: Install GCC
       run: sudo apt update && sudo apt install -y build-essential
 
-    - name: Compile calculator
-      run: gcc add.c sub.c mul.c div.c main.c -o calculator
-
-    - name: Run calculator
-      run: ./calculator
+    - name: generate ./exe
+      run: make
