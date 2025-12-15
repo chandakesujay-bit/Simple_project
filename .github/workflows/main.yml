@@ -11,11 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Install GCC
-      run: sudo apt update && sudo apt install -y build-essential
+      - name: Install GCC
+        run: sudo apt update && sudo apt install -y build-essential
 
-    - name: generate ./exe
-      run: make
+      - name: Generate executable
+        run: make
+
+      - name: Use GitHub Secret (Practice)
+        env:
+          MESSAGE: ${{ secrets.PRACTICE_MESSAGE }}
+        run: |
+          echo "Message from secret: $MESSAGE"
